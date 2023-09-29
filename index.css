@@ -1,0 +1,87 @@
+:root{
+    --bodybgcolor: black;
+    --widgetbgcolor: rgba(94, 94, 94, 0.4);
+    --textcolor1: white;
+    --textcolor2: rgb(132, 130, 130);
+    --textcolor3: rgb(97, 226, 97);
+    --fillcolor1: rgba(43, 129, 195, 0.854);
+    --fillcolor2: rgba(211, 211, 211, 0.436);
+    --fillcolor3: rgba(108, 231, 108, 0.463);
+}
+
+*{
+    background-color: var(--bodybgcolor);
+    color: var(--textcolor1);
+}
+
+nav{
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .wrapper { grid-template-columns: repeat(2, 1fr); }
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [col1-start] 300px  [col2-start] 420px  [col3-start] 420px [col4-start] 340px  [col3-end];
+    grid-template-rows: [row1-start] 150px [row2-start] 150px [row3-start] 150px [row4-start] 150px [row5-start] 250px [row5-end];
+}
+  
+.box {
+    background-color: var(--widgetbgcolor);
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+  
+}
+  
+.mainmenu {
+    grid-column: col1-start / col2-start;
+    grid-row: row1-start / row5-end;
+}
+
+.totalrevenue {
+          grid-column: col2-start / col3-start ;
+          grid-row: row1-start / row3-start;
+}
+
+.salesfunnel {
+    grid-column: col3-start / col4-start;
+    grid-row: row1-start / row3-start ;
+}
+
+.ongoingsale {
+    grid-column: col4-start / col4-end;
+    grid-row: row1-start / row2-start ;
+}
+
+.customercountries {
+    width: 460px;
+    grid-column: col2-start / col3-start;
+    grid-row: row3-start / row5-start ;
+}
+
+.visitbydevice {
+    margin-left: 80px;
+    width: 300px;
+    grid-column: col3-start / col3-start;
+    grid-row: row3-start / row5-start ;
+}
+  
+.topproduct {
+    grid-column: col4-start / col4-end;
+    grid-row: row2-start / row5-start ;
+}
+
+.recenttransactions {
+    grid-column: col2-start / col4-start;
+    grid-row: row5-start / row5-end ;
+}
+
+.target {
+    grid-column: col4-start / col4-end;
+    grid-row: row5-start / row5-end ;
+}
